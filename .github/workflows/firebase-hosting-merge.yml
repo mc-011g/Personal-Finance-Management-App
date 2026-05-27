@@ -9,12 +9,16 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-    steps:
+    steps:   
       - uses: actions/checkout@v4
       - run: npm install      
         working-directory: front-end
       - run: npm run build
         working-directory: front-end
+        env:
+            VITE_API_URL: ${{ secrets.VITE_API_URL }}
+            VITE_FRONTEND_URL: ${{ secrets.VITE_FRONTEND_URL }}
+            VITE_NEON_AUTH_URL: ${{ secrets.VITE_NEON_AUTH_URL }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

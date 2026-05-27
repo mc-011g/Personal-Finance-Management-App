@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PersonalFinanceManagementAppApplication<personal-finance-management-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.matthewcarmichael.personal_finance_management_app.PersonalFinanceManagementAppApplication",
+            "projectName": "personal-finance-management-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
